@@ -52,13 +52,12 @@ end
 
 def selects_the_category_name_and_the_sum_total_of_the_all_its_pledges_for_the_books_category
   "SELECT
-    name, SUM(amount)
+    category, SUM(amount)
    FROM
-    users, pledges
+    projects, pledges
    WHERE
-    users.id = pledges.user_id
+    projects.id = pledges.project_id AND 
+    projects.category = 'books'
    GROUP BY
-    name
-   ORDER BY
-     SUM(amount)"
+    category;"
 end
