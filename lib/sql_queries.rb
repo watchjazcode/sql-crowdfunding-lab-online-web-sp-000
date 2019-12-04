@@ -20,8 +20,7 @@ def selects_the_titles_and_amount_over_goal_of_all_projects_that_have_met_their_
    FROM
     projects, pledges
    WHERE
-    projects.id = pledges.project_id AND
-    total_amount > 0
+    projects.id = pledges.project_id
    GROUP BY
     projects.id
    HAVING
