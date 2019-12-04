@@ -33,7 +33,7 @@ def selects_user_names_and_amounts_of_all_pledges_grouped_by_name_then_orders_th
    FROM
     users, pledges
    WHERE
-    users.id = pledes.user_id
+    users.id = pledges.user_id
    GROUP BY
     name
    ORDER BY
