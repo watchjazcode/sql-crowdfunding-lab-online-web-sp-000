@@ -46,7 +46,7 @@ def selects_the_category_names_and_pledge_amounts_of_all_pledges_in_the_music_ca
    FROM
     projects, pledges
    WHERE
-    projects.id = pledges.project_id AND 
+    projects.id = pledges.project_id AND
     projects.category = 'music';"
 end
 
@@ -56,7 +56,7 @@ def selects_the_category_name_and_the_sum_total_of_the_all_its_pledges_for_the_b
    FROM
     projects, pledges
    WHERE
-    projects.id = pledges.project_id AND 
+    projects.id = pledges.project_id AND
     projects.category = 'books'
    GROUP BY
     category;"
